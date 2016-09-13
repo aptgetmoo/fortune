@@ -16,3 +16,7 @@ class TestGetCows(unittest.TestCase):
     def test_cows_default():
         """Assert that the default cow (at least) exists"""
         self.assertTrue('default' in self.cows)
+
+
+if __name__ == "__main__":
+    unittest.main()
