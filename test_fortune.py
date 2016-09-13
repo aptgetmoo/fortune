@@ -7,13 +7,13 @@ class TestGetCows(unittest.TestCase):
     def setUp(self):
         self.cows = get_cows()
 
-    def test_cows_return_type():
+    def test_cows_return_type(self):
         """Assert that we have a list of strings"""
         self.assertTrue(type(self.cows) == list)
         self.assertTrue(len(self.cows) > 0)
         self.assertTrue(all([type(c) == str for c in self.cows]))
 
-    def test_cows_default():
+    def test_cows_default(self):
         """Assert that the default cow (at least) exists"""
         self.assertTrue('default' in self.cows)
 
