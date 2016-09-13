@@ -21,4 +21,6 @@ def get_cows():
         cows = line.split(' ')
         cowsays += cows
 
+
+    print(cowsays)
     return cowsays
