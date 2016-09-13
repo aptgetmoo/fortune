@@ -16,6 +16,7 @@ def get_cows():
     # the first line is not helpful
     cowsay_lines = cowsay_string[1:]
 
+    print(cowsay_lines)
     cowsays = []
     for line in cowsay_lines:
         print(line)
