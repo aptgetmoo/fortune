@@ -14,15 +14,11 @@ def get_cows():
     cowsay_lines = cowsay_string.split('\n')
 
     # the first line is not helpful
-    cowsay_lines = cowsay_string[1:]
+    cowsay_lines = cowsay_lines[1:]
 
-    print(cowsay_lines)
     cowsays = []
     for line in cowsay_lines:
-        print(line)
         cows = line.split(' ')
         cowsays += cows
 
-
-    print(cowsays)
     return cowsays
