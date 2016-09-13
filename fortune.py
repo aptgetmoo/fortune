@@ -18,6 +18,7 @@ def get_cows():
 
     cowsays = []
     for line in cowsay_lines:
+        print(line)
         cows = line.split(' ')
         cowsays += cows
 
