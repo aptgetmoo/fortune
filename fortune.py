@@ -32,5 +32,6 @@ def get_cows():
 @app.route('/')
 def index():
     fortune = subprocess.check_output(['fortune'])
-    cowsay = subprocess.check_call(['cowsay', '-f', choice(get_cows()),
+    cowsay = subprocess.check_output(['cowsay', '-f', choice(get_cows()),
                                     fortune])
+    return cowsay
