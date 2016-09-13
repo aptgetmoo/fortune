@@ -11,7 +11,7 @@ def get_cows():
     This is the output to `cowsay -l`
     """
 
-    if getattr(g, cows, None) is not None:
+    if getattr(g, 'cows', None) is not None:
         return g.cows
     cowsays = []
     cowsay_string = subprocess.check_output(['cowsay', '-l'])
