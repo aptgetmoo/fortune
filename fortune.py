@@ -2,7 +2,7 @@
 
 import subprocess
 from random import choice
-from flask import Flask, g
+from flask import Flask, g, Response
 
 app = Flask(__name__)
 
@@ -31,7 +31,12 @@ def get_cows():
 
 @app.route('/')
 def index():
+    cow = ''
+    while cow == '':
+        cow = choice(get_cows())
     fortune = subprocess.check_output(['fortune'])
-    cowsay = subprocess.check_output(['cowsay', '-f', choice(get_cows()),
-                                    fortune])
-    return cowsay
+    cowsay = subprocess.check_output(['cowsay', '-f', cow, fortune])
+    return Response(cowsay, mimetype='text/plain')
+
+if __name__ == "__main__":
+    app.run('0.0.0.0')
